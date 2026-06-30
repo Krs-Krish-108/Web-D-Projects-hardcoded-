@@ -1,1 +1,2 @@
 this is just a sample file created to test whether i can delete files just by commiting changes to the repository or it's just my assumption. I will try to delete this file and see if it works.
+Just another line to make sure the file has some content before deletion.
