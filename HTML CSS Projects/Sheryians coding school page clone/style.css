@@ -1,9 +1,17 @@
+:root{
+    --grey:#212121;
+    --green:#009660;
+    --white:#e9e9e9;
+    --black:#0c0c0c;
+    --lgrey:#929292;
+}
+
 @font-face {
     font-family: neu;
     src: url(./NeueMachina-Light.woff2);
 }
 @font-face {
-    font-family: hell;
+    font-family: manv;
     src: url(./Manrope-VariableFont_wght.woff2);
 }
 
@@ -11,7 +19,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
   color: #fff
 }
 
@@ -22,9 +29,11 @@ body {
 }
 
 body {
-  background-color: #111
+  background-color: var(--black);
 }
 
+
+/*=------------------------ nav bar -------------------------------*/
 nav{
     display: flex;
     align-items: center;
@@ -32,6 +41,17 @@ nav{
     padding: 19px 40px;
     position: fixed;
     width: 100%;
+}
+
+.green{
+    color: var(--green);
+}
+.grey{
+    color: var(--grey);
+    background-color: #ffffff;
+}
+.lgrey{
+    color: var(--lgrey);
 }
 
 .nav1 {
@@ -104,4 +124,240 @@ nav{
     .nav3{
         display: flex;
     }
+}
+/*=---------------------------------- nav complete ------------------------------------------------- */
+
+
+
+/*=---------------------------------- main body ---------------------------------------------------- */
+main{
+    padding-top: 120px;
+}
+
+.section1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 70px;
+    font-family: manv;
+}
+
+
+/*:-======================================================*/
+/*+----------------- LEFT SECTION -----------------------*/
+/*=-====================================================*/
+
+/*:--------------------------------------------*/
+/*:----------- LEFT UPPER SECTION ------------*/
+/*:------------------------------------------*/
+/*? LEFT UPPER SECTION */
+
+.section1 .left{
+    width: 43%;
+}
+.section1 .left h1{
+    font-size: 36px;
+}
+
+.section1 .left .tags{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 25px 0px;
+    gap: 5px 5px;
+}
+.section1 .left .tags h4{
+    background-color: var(--grey);
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.section1 .left h3{
+    font-size: 28px;
+}
+.section1 .left .lgrey{
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/*_--------------------------------------------*/
+/*:----------- LEFT LOWER SECTION ------------*/
+/*_------------------------------------------*/
+.section1 .left .cta{
+    display: flex;
+    align-items: center;
+
+}
+
+.left .cta button{
+    background-color: var(--green);
+    padding: 17px 48px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+    margin-right: 5px;
+}
+.left .cta button:nth-child(2){
+    background-color: var(--grey);
+}
+
+
+
+/*:-======================================================*/
+/*+----------------- RIGHT SECTION ----------------------*/
+/*=-====================================================*/
+
+
+/*:--------------------------------------------*/
+/*:------------ RIGHT UPPER SECTION ----------*/
+/*:------------------------------------------*/
+
+.section1 .right .right-in{
+    width: 600px;
+}
+.section1 .right .right-in .image{
+    width: 100%;
+}
+.section1 .right .right-in .image img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.right-in .image-bottom{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    gap: 8px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--grey);
+
+}
+.right-in .image-bottom h4{
+    padding: 10px;
+    background-color: #151515;
+    width: 45%;
+    border-radius: 4px;
+}
+
+
+
+/*=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*.------------------- Responsiveness -------------------- */
+/*=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media (max-width:1540px) {
+    .section1 .right .right-in{
+    width: 39vw;
+    }
+}
+
+@media (max-width:1400px) {
+    .section1 .left h1{
+    font-size: 2.5vw;
+    }
+}
+
+@media (max-width:1300px) {
+    .section1 .right .right-in{
+    width: 502px;
+    }
+}
+
+@media (max-width:1000px){
+    main{
+        padding-top: 50px;
+    }
+    .section1{
+        padding: 15px 3.5vw;
+    }
+}
+
+
+/*:-=========================================*/
+/*=------------- Mobile view ---------------*/
+/*:-=======================================*/
+@media (max-width:800px) {
+    main{
+        padding-top: 50px;
+    }
+    
+    .section1{
+        flex-direction: column-reverse;
+        padding: 15px 4vw;
+    }
+    .section1 .left{
+        width: 100%;
+        margin-top: 30px;
+    }
+/*:-----------------------------------------*/
+/*:------------- H1 heading ---------------*/
+/*:---------------------------------------*/
+    .section1 .left h1{
+    font-size: 3.5vw;
+    }
+    .section1 .right .right-in{
+    width: 100%;
+    }
+
+/*:-------------------------------------------*/
+/*:------------- Image bottom box -----------*/
+/*:-----------------------------------------*/
+    .right-in .image-bottom{
+    padding: 2.5vw;
+    padding-top: 2.8vw;
+    gap: 8px;
+    border-radius: 5px;
+    }
+
+    .right-in .image-bottom h4{
+        padding: 6px 12px;
+        font-size: 2.3vw;
+    }
+
+/*:--------------------------------------*/
+/*:------------ Tags area --------------*/
+/*:------------------------------------*/
+    .section1 .left .tags{
+    margin: 2.8vw 0px;
+    gap: 5px 5px;
+    }
+    .section1 .left .tags h4{
+    padding: 7px 12px;
+    font-size: 2vw;
+    }
+
+
+    .section1 .left h3{
+    font-size: 28px;
+    }
+
+/*:--------------------------------------*/
+/*:------------ cta buttons ------------*/
+/*:------------------------------------*/
+
+    .left .cta button{
+        padding: 17px 0px;
+        width: 100%;
+        margin: 10px 0px;
+        margin-right: 5px;
+    }
+    
+    .section1 .left h3{
+        font-size: 3.5vw;
+    }
+
+    .section1 .left .lgrey{
+    font-size: 2vw;
+    font-weight: 800;
+    }
+}
+
+
+@media (max-width:600px) {
+    .section1 .left h1{
+    font-size: 3.2vw;
+}
 }
